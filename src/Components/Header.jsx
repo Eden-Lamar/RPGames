@@ -17,7 +17,7 @@ function Header() {
 
       <div className="flex bg-slate-200 p-2 w-full items-center mx-5 rounded-full">
         <HiOutlineMagnifyingGlass />
-        <input type="text" placeholder="Search Games..." className="bg-transparent outline-none px-2"/>
+        <input type="text" placeholder="Search Games..." className="bg-transparent outline-none px-2 w-full"/>
       </div>
 
       <div onClick={()=> theme ==="light" ? (setTheme("dark"), localStorage.setItem("theme", "dark")): (setTheme('light'), localStorage.setItem("theme", "light"))} className='cursor-pointer'>

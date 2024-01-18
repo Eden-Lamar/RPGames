@@ -49,6 +49,7 @@ function Home() {
 
   return (
     <div>
+      {/* burger menu visible on mobile view only */}
       <div className="md:hidden cursor-pointer flex " onClick={hideSidebar} >
         {
           hidden=== "hidden" ? <HiMenuAlt2 className='text-4xl  dark:text-gray-400'  />
@@ -60,7 +61,7 @@ function Home() {
 
       <div className="grid grid-cols-4 px-8">
 
-          <div className={`absolute md:static dark:bg-zinc-900 bg-white z-10 ${hidden} md:block h-screen overflow-y-auto md:h-auto md:overflow-visible`}>
+          <div className={`absolute md:static dark:bg-zinc-900 bg-white z-10 ${hidden} md:block h-screen overflow-y-auto`}>
             <GeneralList genreId={(genreId)=> getGameListbyGenresIdFn(genreId)} selectedGenresName={name=> setSelectedGenresName(name)} hidden={name => setHidden(name)}/>
           </div>
 
